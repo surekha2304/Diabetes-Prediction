@@ -32,10 +32,7 @@ st.markdown(page_bg_img, unsafe_allow_html=True)
 
 # Load trained models
 diabetes_model = pickle.load(open(r'diabetes_model.sav', 'rb'))
-# heart_disease_model = pickle.load(open(r'heart_disease_model.sav', 'rb'))
-# parkinsons_model = pickle.load(open(r'parkinsons_model.sav', 'rb'))
-# lung_cancer_model = pickle.load(open(r'lungs_disease_model.sav', 'rb'))
-# thyroid_model = pickle.load(open(r'Thyroid_model.sav', 'rb'))
+
 
 # Sidebar Menu
 with st.sidebar:
@@ -82,56 +79,6 @@ if selected == "Diabetes Prediction":
     ]
     predict_disease(diabetes_model, diabetes_labels)
 
-# # **Heart Disease Prediction**
-# if selected == "Heart Disease Prediction":
-#     st.title("Heart Disease Prediction Using ML")
-#     heart_labels = [
-#         "Age", "Sex (0 = Female, 1 = Male)", "Chest Pain Type", 
-#         "Resting Blood Pressure", "Cholesterol Level", "Fasting Blood Sugar (1=True, 0=False)", 
-#         "Resting ECG Results", "Max Heart Rate Achieved", "Exercise-Induced Angina (1=Yes, 0=No)", 
-#         "ST Depression Induced by Exercise", "Slope of Peak Exercise ST Segment", 
-#         "Major Vessels Colored by Fluoroscopy", "Thalassemia (0-3)"
-#     ]
-#     predict_disease(heart_disease_model, heart_labels)
-
-# # **Parkinson’s Prediction**
-# if selected == "Parkinsons Prediction":
-#     st.title("Parkinsons Prediction Using ML")
-#     parkinsons_labels = [
-#         "MDVP:Fo(Hz)", "MDVP:Fhi(Hz)", "MDVP:Flo(Hz)", 
-#         "MDVP:Jitter(%)", "MDVP:Jitter(Abs)", "MDVP:RAP", 
-#         "MDVP:PPQ", "Jitter:DDP", "MDVP:Shimmer", 
-#         "MDVP:Shimmer(dB)", "Shimmer:APQ3", "Shimmer:APQ5", 
-#         "MDVP:APQ", "Shimmer:DDA", "NHR", 
-#         "HNR", "RPDE", "DFA", 
-#         "spread1", "spread2", "D2", "PPE"
-#     ]
-#     predict_disease(parkinsons_model, parkinsons_labels)
-
-# # # **Lung Cancer Prediction**
-# if selected == "Lung Cancer Prediction":
-#     st.title("Lung Cancer Prediction Using ML")
-    
-#     lung_cancer_labels = [
-#         "Gender (1 = Male; 0 = Female)", "Age", "Smoking ",
-#         "Yellow Fingers", "Anxiety",
-#         "Peer Pressure", "Chronic Disease",
-#         "Fatigue", "Allergy",
-#         "Wheezing", "Alcohol Consuming",
-#         "Coughing ", "Shortness Of Breath",
-#         "Swallowing Difficulty", "Chest Pain"
-#     ]
-    
-#     predict_disease(lung_cancer_model, lung_cancer_labels)
 
 
-# # **Thyroid Disease Prediction**
-# if selected == "Thyroid Disease Prediction":
-#     st.title("Hypo-Thyroid Prediction Using ML")
-#     thyroid_labels = [
-#         "Age", "Sex (1=Male, 0=Female)", "On Thyroxine (1=Yes, 0=No)", 
-#         "TSH Level", "T3 Measured (1=Yes, 0=No)", "T3 Level", 
-#         "TT4 Level"
-#     ]
-#     predict_disease(thyroid_model, thyroid_labels)
 
